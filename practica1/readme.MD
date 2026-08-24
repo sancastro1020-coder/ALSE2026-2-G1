@@ -25,4 +25,10 @@ En esta práctica se realizaron diferentes operaciones básicas utilizando Git y
 ## Rama utilizada
 
 `practica1-git`
+## Comandos principales utilizados
+
+- `find` para buscar archivos.
+- `ls -l` para consultar permisos y detalles.
+- `wc -l` para contar líneas.
+- `grep` para buscar palabras dentro de archivos.
 
