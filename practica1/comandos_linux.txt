@@ -1,0 +1,9 @@
+Comandos utilizados en la practica de Linux/Bash
+
+find . -type f -name "*.txt"
+wc -l injury-statistics-work-related-claims-2018-csv.csv
+grep -oi "female" injury-statistics-work-related-claims-2018-csv.csv | wc -l
+
+Resultados:
+2946 lineas en el archivo CSV.
+51 apariciones de la palabra female.
