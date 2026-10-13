@@ -1,0 +1,89 @@
+digraph UML {
+    graph [
+        label="DIAGRAMA UML - SISTEMA DE ALQUILER DE VEHICULOS",
+        labelloc="t",
+        fontsize=20,
+        rankdir=TB,
+        nodesep=0.8,
+        ranksep=1.0,
+        splines=ortho
+    ];
+
+    node [
+        shape=plain,
+        fontname="Arial"
+    ];
+
+    edge [
+        fontname="Arial",
+        fontsize=10
+    ];
+
+    Vehiculo [label=<
+        <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+            <TR><TD BGCOLOR="#D9EAF7"><B>Vehiculo</B></TD></TR>
+            <TR><TD ALIGN="LEFT"># marca : string</TD></TR>
+            <TR><TD ALIGN="LEFT"># modelo : string</TD></TR>
+            <TR><TD ALIGN="LEFT"># placa : string</TD></TR>
+            <TR><TD ALIGN="LEFT"># disponible : bool</TD></TR>
+            <HR/>
+            <TR><TD ALIGN="LEFT">+ Vehiculo(marca, modelo, placa)</TD></TR>
+            <TR><TD ALIGN="LEFT">+ getMarca() : string</TD></TR>
+            <TR><TD ALIGN="LEFT">+ getModelo() : string</TD></TR>
+            <TR><TD ALIGN="LEFT">+ getPlaca() : string</TD></TR>
+            <TR><TD ALIGN="LEFT">+ estaDisponible() : bool</TD></TR>
+            <TR><TD ALIGN="LEFT">+ alquilar() : void</TD></TR>
+            <TR><TD ALIGN="LEFT">+ devolver() : void</TD></TR>
+            <TR><TD ALIGN="LEFT">+ mostrarInformacion() : void</TD></TR>
+        </TABLE>
+    >];
+
+    Auto [label=<
+        <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+            <TR><TD BGCOLOR="#E2F0D9"><B>Auto</B></TD></TR>
+            <TR><TD ALIGN="LEFT">- capacidadPasajeros : int</TD></TR>
+            <HR/>
+            <TR><TD ALIGN="LEFT">+ Auto(marca, modelo, placa, capacidadPasajeros)</TD></TR>
+            <TR><TD ALIGN="LEFT">+ mostrarInformacion() : void</TD></TR>
+        </TABLE>
+    >];
+
+    Bicicleta [label=<
+        <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+            <TR><TD BGCOLOR="#E2F0D9"><B>Bicicleta</B></TD></TR>
+            <TR><TD ALIGN="LEFT">- tipo : string</TD></TR>
+            <HR/>
+            <TR><TD ALIGN="LEFT">+ Bicicleta(marca, modelo, placa, tipo)</TD></TR>
+            <TR><TD ALIGN="LEFT">+ mostrarInformacion() : void</TD></TR>
+        </TABLE>
+    >];
+
+    SistemaAlquiler [label=<
+        <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+            <TR><TD BGCOLOR="#FCE4D6"><B>SistemaAlquiler</B></TD></TR>
+            <TR><TD ALIGN="LEFT">- vehiculos : vector&lt;Vehiculo*&gt;</TD></TR>
+            <HR/>
+            <TR><TD ALIGN="LEFT">+ registrarVehiculo(vehiculo) : void</TD></TR>
+            <TR><TD ALIGN="LEFT">+ alquilarVehiculo(placa) : bool</TD></TR>
+            <TR><TD ALIGN="LEFT">+ devolverVehiculo(placa) : bool</TD></TR>
+            <TR><TD ALIGN="LEFT">+ mostrarDisponibles() : void</TD></TR>
+        </TABLE>
+    >];
+
+    { rank=same; Auto; Bicicleta; }
+
+    Auto -> Vehiculo [
+        arrowhead=empty,
+        label=" hereda "
+    ];
+
+    Bicicleta -> Vehiculo [
+        arrowhead=empty,
+        label=" hereda "
+    ];
+
+    SistemaAlquiler -> Vehiculo [
+        arrowhead=odiamond,
+        label=" administra "
+    ];
+}
