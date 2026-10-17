@@ -1,0 +1,12 @@
+PROJECT_NAME           = "Proyecto PaqueteEnvio"
+PROJECT_BRIEF          = "Sistema de seguimiento de paquetes"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = include src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.cpp
+EXTRACT_ALL             = YES
+JAVADOC_AUTOBRIEF       = YES
+GENERATE_HTML           = YES
+HTML_OUTPUT             = html
+GENERATE_LATEX          = NO
+QUIET                   = YES

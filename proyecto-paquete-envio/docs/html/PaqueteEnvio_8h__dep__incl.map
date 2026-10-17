@@ -1,0 +1,7 @@
+<map id="include/PaqueteEnvio.h" name="include/PaqueteEnvio.h">
+<area shape="rect" id="Node000001" title="Declaración de la clase PaqueteEnvio." alt="" coords="77,5,251,31"/>
+<area shape="rect" id="Node000002" href="$PaqueteEnvio_8cpp.html" title="Implementación de PaqueteEnvio." alt="" coords="5,79,165,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,42,100,80,96,76,139,38"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Programa principal para probar la clase PaqueteEnvio." alt="" coords="190,79,295,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,38,232,76,228,80,185,42"/>
+</map>
